@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e2e53bfbc6e248499c2bda3a0c99b39f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                <style>
+                    .leaflet-image-layer {
+                        /* old android/safari*/
+                        image-rendering: -webkit-optimize-contrast;
+                        image-rendering: crisp-edges; /* safari */
+                        image-rendering: pixelated; /* chrome */
+                        image-rendering: -moz-crisp-edges; /* firefox */
+                        image-rendering: -o-crisp-edges; /* opera */
+                        -ms-interpolation-mode: nearest-neighbor; /* ie */
+                    }
+                </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e2e53bfbc6e248499c2bda3a0c99b39f" ></div>
+        
+</body>
+<script>    
+    
+            var map_e2e53bfbc6e248499c2bda3a0c99b39f = L.map(
+                "map_e2e53bfbc6e248499c2bda3a0c99b39f",
+                {
+                    center: [6.236760228104714, -75.56371893862548],
+                    crs: L.CRS.EPSG3857,
+                    name: "Esri Satellite",
+                    zoomControl: true,
+                    preferCanvas: false,
+                    zoom: 17,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_946a890a00bd4b00b5c74a39d0d669be = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e2e53bfbc6e248499c2bda3a0c99b39f);
+        
+    
+            var image_overlay_da662ff406004a29a611f9f315cca537 = L.imageOverlay(
+                "data:image/png;base64,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",
+                [[6.234496358321856, -75.56598122789518], [6.239024093193285, -75.56145666929497]],
+                {"crossOrigin": false, "interactive": true, "zindex": 1}
+            ).addTo(map_e2e53bfbc6e248499c2bda3a0c99b39f);
+        
+    
+        var popup_e43737f94bb348b6b995178f11c1fbd1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43002f728c09466c96cbd1f84d2e1584 = $(`<div id="html_43002f728c09466c96cbd1f84d2e1584" style="width: 100.0%; height: 100.0%;">Imagen # 540</div>`)[0];
+            popup_e43737f94bb348b6b995178f11c1fbd1.setContent(html_43002f728c09466c96cbd1f84d2e1584);
+        
+
+        image_overlay_da662ff406004a29a611f9f315cca537.bindPopup(popup_e43737f94bb348b6b995178f11c1fbd1)
+        ;
+
+        
+    
+    
+            var layer_control_61e42434a952480ca95ce042e7d4e810 = {
+                base_layers : {
+                    "https://server.arcgisonline.com/arcgis/rest/services/world_imagery/mapserver/tile/{z}/{y}/{x}" : tile_layer_946a890a00bd4b00b5c74a39d0d669be,
+                },
+                overlays :  {
+                    "Medellin cell - urban extent 540" : image_overlay_da662ff406004a29a611f9f315cca537,
+                },
+            };
+            L.control.layers(
+                layer_control_61e42434a952480ca95ce042e7d4e810.base_layers,
+                layer_control_61e42434a952480ca95ce042e7d4e810.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_e2e53bfbc6e248499c2bda3a0c99b39f);
+        
+</script>
