@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_87047e4ecbdc4e8bbb1f9c5dc0e80896 {
+                #map_999c835800df4f298877b7eb20c640a8 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,15 +35,15 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_87047e4ecbdc4e8bbb1f9c5dc0e80896" ></div>
+            <div class="folium-map" id="map_999c835800df4f298877b7eb20c640a8" ></div>
         
 </body>
 <script>    
     
-            var map_87047e4ecbdc4e8bbb1f9c5dc0e80896 = L.map(
-                "map_87047e4ecbdc4e8bbb1f9c5dc0e80896",
+            var map_999c835800df4f298877b7eb20c640a8 = L.map(
+                "map_999c835800df4f298877b7eb20c640a8",
                 {
-                    center: [6.23672031207403, -75.59987664192106],
+                    center: [6.291015156371594, -75.58185791732578],
                     crs: L.CRS.EPSG3857,
                     preferCanvas: false,
                     zoom: 17,
@@ -56,38 +56,38 @@
 
         
     
-            var tile_layer_a1061ee125cf43088d4acb61c9c2d75f = L.tileLayer(
+            var tile_layer_add26a8ae7ff4124822f719a063cf04a = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_87047e4ecbdc4e8bbb1f9c5dc0e80896);
+            ).addTo(map_999c835800df4f298877b7eb20c640a8);
         
     
-        function geo_json_21c2c6c16149490087944bbfc748189b_styler(feature) {
+        function geo_json_fc833e49b95d4b5f900078673c88fe21_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "yellow", "fillOpacity": 0.0, "weight": 1};
             }
         }
-        function geo_json_21c2c6c16149490087944bbfc748189b_onEachFeature(feature, layer) {
+        function geo_json_fc833e49b95d4b5f900078673c88fe21_onEachFeature(feature, layer) {
             layer.on({
                 click: function(e) {
-                    map_87047e4ecbdc4e8bbb1f9c5dc0e80896.fitBounds(e.target.getBounds());
+                    map_999c835800df4f298877b7eb20c640a8.fitBounds(e.target.getBounds());
                 }
             });
         };
-        var geo_json_21c2c6c16149490087944bbfc748189b = L.geoJson(null, {
-                onEachFeature: geo_json_21c2c6c16149490087944bbfc748189b_onEachFeature,
+        var geo_json_fc833e49b95d4b5f900078673c88fe21 = L.geoJson(null, {
+                onEachFeature: geo_json_fc833e49b95d4b5f900078673c88fe21_onEachFeature,
             
-                style: geo_json_21c2c6c16149490087944bbfc748189b_styler,
+                style: geo_json_fc833e49b95d4b5f900078673c88fe21_styler,
         });
-        function geo_json_21c2c6c16149490087944bbfc748189b_add (data) {
-            geo_json_21c2c6c16149490087944bbfc748189b.addData(data)
-                .addTo(map_87047e4ecbdc4e8bbb1f9c5dc0e80896);
+        function geo_json_fc833e49b95d4b5f900078673c88fe21_add (data) {
+            geo_json_fc833e49b95d4b5f900078673c88fe21.addData(data)
+                .addTo(map_999c835800df4f298877b7eb20c640a8);
         }
-            geo_json_21c2c6c16149490087944bbfc748189b_add({"bbox": [-75.60213907137515, 6.234456301908507, -75.59761423244238, 6.238984317658586], "features": [{"bbox": [-75.60213907137515, 6.234456301908507, -75.59761423244238, 6.238984317658586], "geometry": {"coordinates": [[[-75.59761423244238, 6.2344614445551825], [-75.60213391109423, 6.234456301908507], [-75.60213907137515, 6.23897917125264], [-75.59761935399533, 6.238984317658586], [-75.59761423244238, 6.2344614445551825]]], "type": "Polygon"}, "id": "256", "properties": {"id": "med_256"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_fc833e49b95d4b5f900078673c88fe21_add({"bbox": [-75.58412053241916, 6.288751199067551, -75.57959532236148, 6.293279108981715], "features": [{"bbox": [-75.58412053241916, 6.288751199067551, -75.57959532236148, 6.293279108981715], "geometry": {"coordinates": [[[-75.57959532236148, 6.288756230504674], [-75.5841154826237, 6.288751199067551], [-75.58412053241916, 6.29327407389788], [-75.5796003330846, 6.293279108981715], [-75.57959532236148, 6.288756230504674]]], "type": "Polygon"}, "id": "396", "properties": {"id": "med_396"}, "type": "Feature"}], "type": "FeatureCollection"});
         
     
-        geo_json_21c2c6c16149490087944bbfc748189b.bindTooltip(
+        geo_json_fc833e49b95d4b5f900078673c88fe21.bindTooltip(
             function(layer){
             // Convert non-primitive to String.
             let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
@@ -110,18 +110,18 @@
             }, {"sticky": true});
         
     
-            var layer_control_0eaa5bf4f59c45ebab796b3836e944eb = {
+            var layer_control_db3b8932494346278c69ef861879fc6b = {
                 base_layers : {
-                    "https://server.arcgisonline.com/arcgis/rest/services/world_imagery/mapserver/tile/{z}/{y}/{x}" : tile_layer_a1061ee125cf43088d4acb61c9c2d75f,
+                    "https://server.arcgisonline.com/arcgis/rest/services/world_imagery/mapserver/tile/{z}/{y}/{x}" : tile_layer_add26a8ae7ff4124822f719a063cf04a,
                 },
                 overlays :  {
-                    "Bounding box" : geo_json_21c2c6c16149490087944bbfc748189b,
+                    "Bounding box" : geo_json_fc833e49b95d4b5f900078673c88fe21,
                 },
             };
             L.control.layers(
-                layer_control_0eaa5bf4f59c45ebab796b3836e944eb.base_layers,
-                layer_control_0eaa5bf4f59c45ebab796b3836e944eb.overlays,
+                layer_control_db3b8932494346278c69ef861879fc6b.base_layers,
+                layer_control_db3b8932494346278c69ef861879fc6b.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_87047e4ecbdc4e8bbb1f9c5dc0e80896);
+            ).addTo(map_999c835800df4f298877b7eb20c640a8);
         
 </script>

@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_25b82e92a17c40569a9fe91d331ce4d0 {
+                #map_3c4a5f4c7d8845679977405ec0c905cb {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,36 +32,23 @@
                 }
             </style>
         
-    
-                <style>
-                    .leaflet-image-layer {
-                        /* old android/safari*/
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges; /* safari */
-                        image-rendering: pixelated; /* chrome */
-                        image-rendering: -moz-crisp-edges; /* firefox */
-                        image-rendering: -o-crisp-edges; /* opera */
-                        -ms-interpolation-mode: nearest-neighbor; /* ie */
-                    }
-                </style>
-            
 </head>
 <body>    
     
-            <div class="folium-map" id="map_25b82e92a17c40569a9fe91d331ce4d0" ></div>
+            <div class="folium-map" id="map_3c4a5f4c7d8845679977405ec0c905cb" ></div>
         
 </body>
 <script>    
     
-            var map_25b82e92a17c40569a9fe91d331ce4d0 = L.map(
-                "map_25b82e92a17c40569a9fe91d331ce4d0",
+            var map_3c4a5f4c7d8845679977405ec0c905cb = L.map(
+                "map_3c4a5f4c7d8845679977405ec0c905cb",
                 {
                     center: [6.168897202331025, -75.58172344441357],
                     crs: L.CRS.EPSG3857,
-                    name: "Esri Satellite",
-                    zoomControl: true,
                     preferCanvas: false,
                     zoom: 17,
+                    name: "Esri Satellite",
+                    zoomControl: true,
                 }
             );
 
@@ -69,44 +56,72 @@
 
         
     
-            var tile_layer_d0277f75299e4e83b9ef09e463140649 = L.tileLayer(
+            var tile_layer_6d3361ddbf2f41cf9696cd0532eec05d = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_25b82e92a17c40569a9fe91d331ce4d0);
+            ).addTo(map_3c4a5f4c7d8845679977405ec0c905cb);
         
     
-            var image_overlay_9f64e60f0e8d4da88d6df163239ed0f0 = L.imageOverlay(
-                "data:image/png;base64,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",
-                [[6.166633283813064, -75.58398548728559], [6.171161116281717, -75.5794614212842]],
-                {"crossOrigin": false, "interactive": true, "zindex": 1}
-            ).addTo(map_25b82e92a17c40569a9fe91d331ce4d0);
+        function geo_json_8a5d9ef292c147299fc88e691034feb5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "yellow", "fillOpacity": 0.0, "weight": 1};
+            }
+        }
+        function geo_json_8a5d9ef292c147299fc88e691034feb5_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_3c4a5f4c7d8845679977405ec0c905cb.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_8a5d9ef292c147299fc88e691034feb5 = L.geoJson(null, {
+                onEachFeature: geo_json_8a5d9ef292c147299fc88e691034feb5_onEachFeature,
+            
+                style: geo_json_8a5d9ef292c147299fc88e691034feb5_styler,
+        });
+        function geo_json_8a5d9ef292c147299fc88e691034feb5_add (data) {
+            geo_json_8a5d9ef292c147299fc88e691034feb5.addData(data)
+                .addTo(map_3c4a5f4c7d8845679977405ec0c905cb);
+        }
+            geo_json_8a5d9ef292c147299fc88e691034feb5_add({"bbox": [-75.58398548728559, 6.166633283813064, -75.5794614212842, 6.171161116281717], "features": [{"bbox": [-75.58398548728559, 6.166633283813064, -75.5794614212842, 6.171161116281717], "geometry": {"coordinates": [[[-75.5794614212842, 6.166638216811601], [-75.58398053741998, 6.166633283813064], [-75.58398548728559, 6.171156179638081], [-75.57946633285066, 6.171161116281717], [-75.5794614212842, 6.166638216811601]]], "type": "Polygon"}, "id": "369", "properties": {"id": "med_369"}, "type": "Feature"}], "type": "FeatureCollection"});
         
     
-        var popup_6f66ad296452463a8d7de1fcc06bd0b1 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_9b6b31d6de3f4c4d84aeb11a7f4fc04a = $(`<div id="html_9b6b31d6de3f4c4d84aeb11a7f4fc04a" style="width: 100.0%; height: 100.0%;">Imagen # 369</div>`)[0];
-            popup_6f66ad296452463a8d7de1fcc06bd0b1.setContent(html_9b6b31d6de3f4c4d84aeb11a7f4fc04a);
-        
-
-        image_overlay_9f64e60f0e8d4da88d6df163239ed0f0.bindPopup(popup_6f66ad296452463a8d7de1fcc06bd0b1)
-        ;
-
+        geo_json_8a5d9ef292c147299fc88e691034feb5.bindTooltip(
+            function(layer){
+            // Convert non-primitive to String.
+            let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+            let fields = ["id"];
+            let aliases = ["Imagen: "];
+            return '<table>' +
+            String(
+                fields.map(
+                columnname=>
+                    `<tr style="text-align: left;">
+                    <th style="padding: 4px; padding-right: 10px;">
+                        ${aliases[fields.indexOf(columnname)]
+                        }
+                    </th>
+                    
+                    <td style="padding: 4px;">${handleObject(layer.feature.properties[columnname])
+                    }</td></tr>`
+                ).join(''))
+                +'</table>'
+            }, {"sticky": true});
         
     
-    
-            var layer_control_7a4d2f2ceb44489b96ce280391e9722c = {
+            var layer_control_f21abfea07dc40b4b230000d4ee5611e = {
                 base_layers : {
-                    "https://server.arcgisonline.com/arcgis/rest/services/world_imagery/mapserver/tile/{z}/{y}/{x}" : tile_layer_d0277f75299e4e83b9ef09e463140649,
+                    "https://server.arcgisonline.com/arcgis/rest/services/world_imagery/mapserver/tile/{z}/{y}/{x}" : tile_layer_6d3361ddbf2f41cf9696cd0532eec05d,
                 },
                 overlays :  {
-                    "Medellin cell - urban extent 369" : image_overlay_9f64e60f0e8d4da88d6df163239ed0f0,
+                    "Bounding box" : geo_json_8a5d9ef292c147299fc88e691034feb5,
                 },
             };
             L.control.layers(
-                layer_control_7a4d2f2ceb44489b96ce280391e9722c.base_layers,
-                layer_control_7a4d2f2ceb44489b96ce280391e9722c.overlays,
+                layer_control_f21abfea07dc40b4b230000d4ee5611e.base_layers,
+                layer_control_f21abfea07dc40b4b230000d4ee5611e.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_25b82e92a17c40569a9fe91d331ce4d0);
+            ).addTo(map_3c4a5f4c7d8845679977405ec0c905cb);
         
 </script>
